@@ -1,0 +1,79 @@
+/* Styles globaux */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+#root {
+    width: 100%;
+}
+
+/* Styles pour la galerie */
+.app-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.app-title {
+    text-align: center;
+    color: #ffffff;
+    font-size: 42px;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    animation: fadeIn 0.8s ease-in;
+}
+
+.owls-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.info-text {
+    text-align: center;
+    color: #ffffff;
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .app-title {
+        font-size: 32px;
+    }
+    
+    .owls-container {
+        gap: 20px;
+    }
+    
+    .info-text {
+        font-size: 16px;
+        padding: 15px;
+    }
+}
